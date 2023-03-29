@@ -1,7 +1,7 @@
 import { sendTelemetrySignal } from "./td.js";
 
 const mainSection = document.getElementById("main-section");
-// The list of pages that can be navigated to. The blog articles are managed in the launchRouter function.
+// The list of pages that can be navigated to. The blog articles are managed in the processRouting function.
 const routes = {
   "/": async () => {
     const { homeContent } = await import("../pages/home.js");
@@ -32,7 +32,7 @@ const isValidArticleName = (articleName) => {
 };
 
 // Calls the appropriate content-filling function based on the URL.
-export const launchRouter = async () => {
+export const processRouting = async () => {
   const hash = window.location.hash.slice(1);
   if (routes.hasOwnProperty(hash)) {
     // If it's a page, calls the appropriate route filling function
@@ -56,6 +56,6 @@ export const launchRouter = async () => {
 // Listens for changes in the hash.
 export const listenToRouteChange = () =>
   window.addEventListener("hashchange", async () => {
-    await launchRouter();
+    await processRouting();
     sendTelemetrySignal();
   });

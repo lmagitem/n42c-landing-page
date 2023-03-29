@@ -2,13 +2,13 @@ import {
   makeButtonsInteractive,
   setActiveNavigationButton,
 } from "./navigation.js";
-import { listenToRouteChange, launchRouter } from "./router.js";
+import { listenToRouteChange, processRouting } from "./router.js";
 import { sendTelemetrySignal } from "./td.js";
 
 makeButtonsInteractive();
 listenToRouteChange();
 setActiveNavigationButton();
-launchRouter();
+processRouting();
 
 // When everything is done, show the page
 document.getElementById("loading-animation").classList.add("hide-content");
