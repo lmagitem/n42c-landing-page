@@ -1,6 +1,20 @@
 import { sendTelemetrySignal } from "./td.js";
 
 const mainSection = document.getElementById("main-section");
+
+// Simple function to redirect users of my old website to my the proper pages
+export const redirectFromOldBlog = () => {
+  const url = window.location.pathname;
+  const pathMatch = url.match(/^\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/);
+  if (pathMatch && pathMatch[4] !== undefined) {
+    const path = pathMatch[4].endsWith("/")
+      ? pathMatch[4].slice(0, -1)
+      : pathMatch[4];
+    const newPath = `/#/blog/${path}`;
+    window.location.replace(newPath);
+  }
+};
+
 // The list of pages that can be navigated to. The blog articles are managed in the processRouting function.
 const routes = {
   "/": async () => {

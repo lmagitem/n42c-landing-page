@@ -1,13 +1,20 @@
 import {
   makeButtonsInteractive,
   setActiveNavigationButton,
+  translateButtons,
 } from "./navigation.js";
-import { listenToRouteChange, processRouting } from "./router.js";
+import {
+  listenToRouteChange,
+  processRouting,
+  redirectFromOldBlog,
+} from "./router.js";
 import { sendTelemetrySignal } from "./td.js";
 
+redirectFromOldBlog();
 makeButtonsInteractive();
 listenToRouteChange();
 setActiveNavigationButton();
+translateButtons();
 processRouting();
 
 // When everything is done, show the page

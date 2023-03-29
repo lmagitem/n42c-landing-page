@@ -1,3 +1,6 @@
+import { findTranslation } from './translation.js';
+import { buttonTranslations } from "../pages/home.js";
+
 // Get the button elements by their IDs
 const aboutButton = document.getElementById("nav-about");
 const blogButton = document.getElementById("nav-blog");
@@ -17,6 +20,12 @@ export const makeButtonsInteractive = () => {
     window.location.hash = "/projects";
     setActiveNavigationButton();
   });
+};
+
+export const translateButtons = () => {
+  aboutButton.innerHTML = findTranslation(buttonTranslations, "about");
+  blogButton.innerHTML = findTranslation(buttonTranslations, "blog");
+  projectsButton.innerHTML = findTranslation(buttonTranslations, "projects");
 };
 
 export const setActiveNavigationButton = () => {

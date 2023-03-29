@@ -1,3 +1,5 @@
+import { findTranslation } from '../js/translation.js';
+
 const articlePage = `<h1 id="page-title" class="align-center padded-bottom">Article</h1>
   <div id="page-wrapper">
     <div id="article-content"></div>
@@ -61,49 +63,19 @@ export const blogContent = {
 };
 
 export const insertArticleContent = (article) => {
-  const language = (navigator.language || navigator.userLanguage || "en")
-    .substring(0, 2)
-    .toLowerCase();
-  console.log(language);
-
-  let title = article.title;
-  let content = article.content;
-  let author = article.author;
-  let date = article.date;
-  const titleEn = article.titleEn;
-  const contentEn = article.contentEn;
-  const authorEn = article.authorEn;
-  const dateEn = article.dateEn;
-  const titleFr = article.titleFr;
-  const contentFr = article.contentFr;
-  const authorFr = article.authorFr;
-  const dateFr = article.dateFr;
-
-// TODO: Externalize translation logic
-
-  if (language == "fr") {
-    title = titleFr ?? title;
-    title = title ?? titleEn;
-    content = contentFr ?? content;
-    content = content ?? contentEn;
-    author = authorFr ?? author;
-    author = author ?? authorEn;
-    date = dateFr ?? date;
-    date = date ?? dateEn;
-  } else {
-    title = titleEn ?? title;
-    title = title ?? titleFr;
-    content = contentEn ?? content;
-    content = content ?? contentFr;
-    author = authorEn ?? author;
-    author = author ?? authorFr;
-    date = dateEn ?? date;
-    date = date ?? dateFr;
-  }
-
   document.getElementById("main-section").innerHTML = articlePage;
-  document.getElementById("page-title").innerHTML = title;
-  document.getElementById("article-content").innerHTML = content;
-  document.getElementById("article-author").innerHTML = author;
-  document.getElementById("article-publication-date").innerHTML = date;
+  document.getElementById("page-title").innerHTML = findTranslation(
+    article,
+    "title"
+  );
+  document.getElementById("article-content").innerHTML = findTranslation(
+    article,
+    "content"
+  );
+  document.getElementById("article-author").innerHTML = findTranslation(
+    article,
+    "author"
+  );
+  document.getElementById("article-publication-date").innerHTML =
+    findTranslation(article, "date");
 };

@@ -5,15 +5,15 @@ use actix_web::middleware::Logger;
 use actix_web::{web, App, HttpRequest, HttpServer, Result};
 use std::path::PathBuf;
 
-async fn index() -> Result<NamedFile> {
-    let path: PathBuf = "./static/index.html".into();
-    Ok(NamedFile::open(path)?)
-}
-
 async fn serve_static(req: HttpRequest) -> Result<NamedFile> {
     let path: PathBuf = req.match_info().query("tail").parse().unwrap();
     let mime = mime_guess::from_path(&path).first_or_octet_stream();
     Ok(NamedFile::open(path)?.set_content_type(mime))
+}
+
+async fn index() -> Result<NamedFile> {
+    let path: PathBuf = "./static/index.html".into();
+    Ok(NamedFile::open(path)?)
 }
 
 #[actix_web::main]
@@ -21,7 +21,6 @@ async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_web=info");
     env_logger::init();
 
-    // TODO: Implement proper redirection behavior and checks that everything is working
     HttpServer::new(|| {
         App::new()
             .wrap(Logger::default())
@@ -38,6 +37,7 @@ async fn main() -> std::io::Result<()> {
             })
             .route("/", web::get().to(index))
             .route("/{year}/{month}/{day}/{path}", web::get().to(index))
+            .route("/{year}/{month}/{day}/{path}/", web::get().to(index))
             .service(
                 Files::new("/static", "static")
                     .prefer_utf8(true)
