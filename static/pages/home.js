@@ -1,6 +1,6 @@
 export const homeContent = {
-  content: `<div id="page-wrapper">
-  <h1 class="align-center padded-bottom">Welcome to N42C!</h1>
+  content: `<h1 id="page-title" class="align-center padded-bottom">Welcome to N42C!</h1>
+  <div id="page-wrapper">
   <p class="align-center padded-bottom">Please, feel comfortable and use the buttons up-there to see what wonders this website is hiding...</p>
   </div>`,
 };
