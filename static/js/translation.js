@@ -8,6 +8,12 @@ export const initLanguage = () => {
   resetHtmlLang(language);
 };
 
+export const changeLanguage = (language, callback) => {
+  localStorage.setItem("lang", language);
+  resetHtmlLang(language);
+  callback();
+}
+
 export const resetHtmlLang = (language) => {
   document.documentElement.setAttribute(
     "lang",

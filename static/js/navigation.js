@@ -1,7 +1,8 @@
-import { findTranslation, resetHtmlLang } from "./translation.js";
+import { findTranslation } from "./translation.js";
 import { buttonTranslations } from "../pages/home.js";
 
 // Get the button elements by their IDs
+const homeButton = document.getElementById("nav-home");
 const aboutButton = document.getElementById("nav-about");
 const blogButton = document.getElementById("nav-blog");
 const projectsButton = document.getElementById("nav-projects");
@@ -10,16 +11,20 @@ const enButton = document.getElementById("nav-lang-en");
 
 export const makeButtonsInteractive = () => {
   // Add the onclick event listeners to the buttons
+  homeButton.addEventListener("click", () => {
+    window.location.hash = `/${localStorage.getItem("lang") || "en"}/`;
+    setActiveNavigationButton();
+  });
   aboutButton.addEventListener("click", () => {
-    window.location.hash = "/about";
+    window.location.hash = `/${localStorage.getItem("lang") || "en"}/about`;
     setActiveNavigationButton();
   });
   blogButton.addEventListener("click", () => {
-    window.location.hash = "/blog";
+    window.location.hash = `/${localStorage.getItem("lang") || "en"}/blog`;
     setActiveNavigationButton();
   });
   projectsButton.addEventListener("click", () => {
-    window.location.hash = "/projects";
+    window.location.hash = `/${localStorage.getItem("lang") || "en"}/projects`;
     setActiveNavigationButton();
   });
   frButton.addEventListener("click", () => onLanguageChange("fr"));
@@ -27,11 +32,8 @@ export const makeButtonsInteractive = () => {
 };
 
 const onLanguageChange = (language) => {
-  localStorage.setItem("lang", language);
-  window.dispatchEvent(new HashChangeEvent("hashchange"));
-  resetHtmlLang(language);
-  translateButtons();
-  setActiveNavigationButton();
+  window.location.hash =
+    window.location.hash.slice(0, 2) + language + window.location.hash.slice(4);
 };
 
 export const translateButtons = () => {

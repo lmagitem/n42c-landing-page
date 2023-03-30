@@ -1,5 +1,6 @@
 import { sendTelemetrySignal } from "./td.js";
-import { findTranslation } from "../js/translation.js";
+import { findTranslation, changeLanguage } from "./translation.js";
+import { translateButtons, setActiveNavigationButton } from "./navigation.js";
 
 const mainSection = document.getElementById("main-section");
 
@@ -7,14 +8,16 @@ const mainSection = document.getElementById("main-section");
 export const redirectFromOldBlog = () => {
   const url = window.location.pathname;
   if (url === "/") {
-    window.location.replace(`/#/`);
+    window.location.replace(`/#/${localStorage.getItem("lang") || "en"}/`);
   }
   const pathMatch = url.match(/^\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/);
   if (pathMatch && pathMatch[4] !== undefined) {
     const path = pathMatch[4].endsWith("/")
       ? pathMatch[4].slice(0, -1)
       : pathMatch[4];
-    window.location.replace(`/#/blog/${path}`);
+    window.location.replace(
+      `/#/${localStorage.getItem("lang") || "en"}/blog/${path}`
+    );
   }
 };
 
@@ -50,7 +53,19 @@ const isValidArticleName = (articleName) => {
 
 // Calls the appropriate content-filling function based on the URL.
 export const processRouting = async () => {
-  const hash = window.location.hash.slice(1);
+  const hash = window.location.hash.slice(4);
+  const lang = window.location.hash.slice(2, 4);
+
+  if (
+    (lang === "en" || lang === "fr") &&
+    lang !== localStorage.getItem("lang")
+  ) {
+    changeLanguage(lang, () => {
+      translateButtons();
+      setActiveNavigationButton();
+    });
+  }
+
   if (routes.hasOwnProperty(hash)) {
     // If it's a page, calls the appropriate route filling function
     return await routes[hash]();
