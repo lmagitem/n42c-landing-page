@@ -1,11 +1,11 @@
 export const homeContent = {
-  content: `<h1 id="page-title" class="align-center padded-bottom">Welcome to N42C!</h1>
+  contentEn: `<h1 id="page-title" class="align-center padded-bottom">Welcome to N42C!</h1>
   <div id="page-wrapper">
   <p class="align-center padded-bottom">Please, feel comfortable and use the buttons up-there to see what wonders this website is hiding...</p>
   <ul dir="auto"> Yet todo:
   <li>
     <p dir="auto">
-      Translate every page
+      Improve SEO
     </p>
   </li>
   <li>
@@ -29,6 +29,12 @@ export const homeContent = {
     </p>
   </li>
   </ul>
+  </div>`,
+  contentFr: `<h1 id="page-title" class="align-center padded-bottom">Bienvenue chez N42C !</h1>
+  <div id="page-wrapper">
+    <p class="align-center padded-bottom">
+      Mettez-vous à l'aise et utilisez les boutons du dessus pour découvrir les merveilles que vous réserve ce site web...
+    </p>
   </div>`,
 };
 

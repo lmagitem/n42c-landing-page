@@ -9,8 +9,10 @@ import {
   redirectFromOldBlog,
 } from "./router.js";
 import { sendTelemetrySignal } from "./td.js";
+import { initLanguage } from "./translation.js";
 
 redirectFromOldBlog();
+initLanguage();
 makeButtonsInteractive();
 listenToRouteChange();
 setActiveNavigationButton();

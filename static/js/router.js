@@ -1,17 +1,20 @@
 import { sendTelemetrySignal } from "./td.js";
+import { findTranslation } from "../js/translation.js";
 
 const mainSection = document.getElementById("main-section");
 
 // Simple function to redirect users of my old website to my the proper pages
 export const redirectFromOldBlog = () => {
   const url = window.location.pathname;
+  if (url === "/") {
+    window.location.replace(`/#/`);
+  }
   const pathMatch = url.match(/^\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/);
   if (pathMatch && pathMatch[4] !== undefined) {
     const path = pathMatch[4].endsWith("/")
       ? pathMatch[4].slice(0, -1)
       : pathMatch[4];
-    const newPath = `/#/blog/${path}`;
-    window.location.replace(newPath);
+    window.location.replace(`/#/blog/${path}`);
   }
 };
 
@@ -19,23 +22,23 @@ export const redirectFromOldBlog = () => {
 const routes = {
   "/": async () => {
     const { homeContent } = await import("../pages/home.js");
-    mainSection.innerHTML = homeContent.content;
+    mainSection.innerHTML = findTranslation(homeContent, "content");
   },
   "/about": async () => {
     const { aboutContent } = await import("../pages/about.js");
-    mainSection.innerHTML = aboutContent.content;
+    mainSection.innerHTML = findTranslation(aboutContent, "content");
   },
   "/blog": async () => {
     const { blogContent } = await import("../pages/blog.js");
-    mainSection.innerHTML = blogContent.content;
+    mainSection.innerHTML = findTranslation(blogContent, "content");
   },
   "/projects": async () => {
     const { projectsContent } = await import("../pages/projects.js");
-    mainSection.innerHTML = projectsContent.content;
+    mainSection.innerHTML = findTranslation(projectsContent, "content");
   },
   "/404": async () => {
     const { fourOhFourContent } = await import("../pages/404.js");
-    mainSection.innerHTML = fourOhFourContent.content;
+    mainSection.innerHTML = findTranslation(fourOhFourContent, "content");
   },
 };
 

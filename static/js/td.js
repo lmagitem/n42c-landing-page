@@ -47,6 +47,7 @@ const doSendSignal = () => {
       isTestMode: true,
       resolution: `${screen.width}×${screen.height}`,
       browserSize: `${window.innerWidth}×${window.innerHeight}`,
+      language: `${localStorage.getItem("lang")}`,
     });
   });
 };

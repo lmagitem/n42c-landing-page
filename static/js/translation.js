@@ -1,7 +1,22 @@
+export const initLanguage = () => {
+  const language =
+    localStorage.getItem("lang") ??
+    (navigator.language || navigator.userLanguage || "en")
+      .substring(0, 2)
+      .toLowerCase();
+  localStorage.setItem("lang", language);
+  resetHtmlLang(language);
+};
+
+export const resetHtmlLang = (language) => {
+  document.documentElement.setAttribute(
+    "lang",
+    language === "fr" ? language : "en"
+  );
+};
+
 export const findTranslation = (object, field) => {
-  const language = (navigator.language || navigator.userLanguage || "en")
-    .substring(0, 2)
-    .toLowerCase();
+  const language = localStorage.getItem("lang");
 
   if (!field || typeof field !== "string") return "";
 
