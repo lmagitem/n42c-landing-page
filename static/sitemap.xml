@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://n42c.com/#/en/</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/en/blog</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/en/about</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/about" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/about" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/en/projects</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/projects" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/projects" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/la-desindustrialisation-une-chance-a-saisir</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/la-desindustrialisation-une-chance-a-saisir" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/la-desindustrialisation-une-chance-a-saisir" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/la-fin-des-cours-dhistoire</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/la-fin-des-cours-dhistoire" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/la-fin-des-cours-dhistoire" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/le-cheval-de-troie</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/le-cheval-de-troie" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/le-cheval-de-troie" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/refuge</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/refuge" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/refuge" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/chris-crawfords-lecture-at-the-fipa</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/chris-crawfords-lecture-at-the-fipa" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/chris-crawfords-lecture-at-the-fipa" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/le-donationware-en-france</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/le-donationware-en-france" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/le-donationware-en-france" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/campagne-kickstarter-lancee</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/campagne-kickstarter-lancee" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/campagne-kickstarter-lancee" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/the-dragon-speech-vf</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/the-dragon-speech-vf" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/the-dragon-speech-vf" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/instants-de-jeu</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/instants-de-jeu" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/instants-de-jeu" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/en/blog/thedragonspeech</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/thedragonspeech" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/thedragonspeech" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/entretien-avec-thierry-arbogast</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/entretien-avec-thierry-arbogast" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/entretien-avec-thierry-arbogast" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://n42c.com/#/fr/blog/aube-noire</loc>
+        <xhtml:link
+            rel="alternate"
+            hreflang="fr"
+            href="https://n42c.com/#/fr/blog/aube-noire" />
+        <xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://n42c.com/#/en/blog/aube-noire" />
+        <lastmod>2023-03-31</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>

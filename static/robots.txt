@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://n42c.com/static/sitemap.xml

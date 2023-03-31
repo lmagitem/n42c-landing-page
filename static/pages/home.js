@@ -5,11 +5,6 @@ export const homeContent = {
   <ul dir="auto"> Yet todo:
   <li>
     <p dir="auto">
-      Improve SEO
-    </p>
-  </li>
-  <li>
-    <p dir="auto">
       Set up the domains properly
     </p>
   </li>

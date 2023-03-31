@@ -16,6 +16,11 @@ async fn index() -> Result<NamedFile> {
     Ok(NamedFile::open(path)?)
 }
 
+async fn serve_robots_txt() -> Result<NamedFile> {
+    let path: PathBuf = "./static/robots.txt".into();
+    Ok(NamedFile::open(path)?)
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_web=info");
@@ -38,6 +43,7 @@ async fn main() -> std::io::Result<()> {
             .route("/", web::get().to(index))
             .route("/{year}/{month}/{day}/{path}", web::get().to(index))
             .route("/{year}/{month}/{day}/{path}/", web::get().to(index))
+            .route("/robots.txt", web::get().to(serve_robots_txt))
             .service(
                 Files::new("/static", "static")
                     .prefer_utf8(true)
