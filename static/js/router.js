@@ -16,7 +16,7 @@ export const redirectFromOldBlog = () => {
       ? pathMatch[4].slice(0, -1)
       : pathMatch[4];
     window.location.replace(
-      `/#/${localStorage.getItem("lang") || "en"}/blog/${path}`
+      `/#/${localStorage.getItem("lang") || "fr"}/blog/${path}`
     );
   }
 };

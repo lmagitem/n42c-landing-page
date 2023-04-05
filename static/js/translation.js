@@ -1,7 +1,7 @@
 export const initLanguage = () => {
   const language =
     localStorage.getItem("lang") ??
-    (navigator.language || navigator.userLanguage || "en")
+    (navigator.language || navigator.userLanguage || "fr")
       .substring(0, 2)
       .toLowerCase();
   localStorage.setItem("lang", language);
