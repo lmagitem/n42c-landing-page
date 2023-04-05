@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Portfolio with my projects and blog posts"
-    />
-    <meta
-      name="keywords"
-      content="Front-end, Developer, JavaScript, Typescript, Rust, Angular, React, Java"
-    />
+    <meta name="description" content="Portfolio with my projects and blog posts" />
+    <meta name="keywords" content="Front-end, Developer, JavaScript, Typescript, Rust, Angular, React, Java" />
     <meta name="author" content='Luc "Magitem" Toupense' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -17,43 +12,43 @@
     <base href="/" />
     <link rel="icon" href="static/images/favicon.ico" />
     <link rel="stylesheet" href="static/css/style.css" />
-    <script
-      src="https://unpkg.com/@telemetrydeck/sdk/dist/telemetrydeck.min.js"
-      defer
-    ></script>
+    <script src="https://unpkg.com/@telemetrydeck/sdk/dist/telemetrydeck.min.js" defer></script>
     <script type="module" src="static/js/td.js"></script>
-  </head>
-  <body class="flex-center">
+</head>
+
+<body class="flex-center">
     <div id="content-box" class="grow padded-dash flex-vertical hidden-content">
-      <div class="dashed-bottom">
-        <nav class="padded-dash-bottom grow flex-horizontal">
-          <div id="logo" class="dashed-right">
-            <a id="nav-home"
-              ><img id="logo" alt="logo" src="static/images/n42c.png"
-            /></a>
-          </div>
-          <div id="nav-blog" class="grow padded dashed-right-thin button">
-            <h3>Blog</h3>
-          </div>
-          <div id="nav-projects" class="grow padded dashed-right-thin button">
-            <h3>Projects</h3>
-          </div>
-          <div id="nav-about" class="grow padded dashed-right-thin button">
-            <h3>About me</h3>
-          </div>
-          <div id="nav-lang" class="grow flex-vertical" style="max-width: 24px;">
-            <div id="nav-lang-fr" class="lang-button"><h3>Fr</h3></div>
-            <div id="nav-lang-en" class="lang-button"><h3>En</h3</div>
-          </div>
-        </nav>
-      </div>
-      <main class="grow flex-vertical padded-dash-top">
-        <section class="grow flex-horizontal padded-dash-bottom scrollable">
-          <div id="main-section" class="grow padded-horizontal"></div>
-        </section>
-      </main>
-    </div>
-    <div id="loading-animation"></div>
-  </body>
-  <script type="module" src="static/js/main.js"></script>
+        <div class="dashed-bottom">
+            <nav class="padded-dash-bottom grow flex-horizontal">
+                <div id="logo" class="dashed-right">
+                    <a id="nav-home"><img id="logo" alt="logo" src="static/images/n42c.png" /></a>
+                </div>
+                <div id="nav-blog" class="grow padded dashed-right-thin button">
+                    <h3>Blog</h3>
+                </div>
+                <div id="nav-projects" class="grow padded dashed-right-thin button">
+                    <h3>Projects</h3>
+                </div>
+                <div id="nav-about" class="grow padded dashed-right-thin button">
+                    <h3>About me</h3>
+                </div>
+                <div id="nav-lang" class="grow flex-vertical" style="max-width: 24px;">
+                    <div id="nav-lang-fr" class="lang-button grow">
+                        <h3>Fr</h3>
+                    </div>
+                    <div id="nav-lang-en" class="lang-button grow">
+                        <h3>En</h3</div>
+                    </div>
+            </nav>
+            </div>
+            <main class="grow flex-vertical padded-dash-top">
+                <section class="grow flex-horizontal padded-dash-bottom scrollable">
+                    <div id="main-section" class="grow padded-horizontal"></div>
+                </section>
+            </main>
+        </div>
+        <div id="loading-animation"></div>
+</body>
+<script type="module" src="static/js/main.js"></script>
+
 </html>
