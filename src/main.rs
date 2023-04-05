@@ -3,6 +3,9 @@ use actix_service::Service;
 use actix_web::http::header::HeaderValue;
 use actix_web::middleware::Logger;
 use actix_web::{web, App, HttpRequest, HttpServer, Result};
+use chrono::Local;
+use fern::{Dispatch, log_file};
+use log::LevelFilter;
 use std::path::PathBuf;
 
 async fn serve_static(req: HttpRequest) -> Result<NamedFile> {
@@ -24,7 +27,26 @@ async fn serve_robots_txt() -> Result<NamedFile> {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     std::env::set_var("RUST_LOG", "actix_web=info");
-    env_logger::init();
+
+    let base_config = Dispatch::new()
+        .level(LevelFilter::Info)
+        .chain(std::io::stdout())
+        .chain(
+            log_file("actix-web.log").expect("Failed to create log file"),
+        );
+
+    let config = Dispatch::new()
+        .format(move |out, message, record| {
+            out.finish(format_args!(
+                "{} [{}] {}",
+                Local::now().format("[%Y-%m-%d %H:%M:%S]"),
+                record.level(),
+                message
+            ))
+        })
+        .chain(base_config);
+
+    config.apply().expect("Failed to set up logging");
 
     HttpServer::new(|| {
         App::new()
