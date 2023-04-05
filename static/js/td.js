@@ -44,7 +44,7 @@ const doSendSignal = () => {
     window.td._app = window.td._app ?? appIdentifier;
     window.td._user = window.td._user ?? uuid ?? "anonymous";
     window.td.signal({
-      isTestMode: true,
+      // isTestMode: true,
       resolution: `${screen.width}×${screen.height}`,
       browserSize: `${window.innerWidth}×${window.innerHeight}`,
       language: `${localStorage.getItem("lang")}`,
