@@ -14,10 +14,10 @@ import { initLanguage } from "./translation.js";
 redirectFromOldBlog();
 initLanguage();
 makeButtonsInteractive();
-listenToRouteChange();
 setActiveNavigationButton();
 translateButtons();
 processRouting();
+listenToRouteChange();
 
 // When everything is done, show the page
 document.getElementById("loading-animation").classList.add("hide-content");

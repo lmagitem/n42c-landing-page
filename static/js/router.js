@@ -7,10 +7,13 @@ const mainSection = document.getElementById("main-section");
 // Simple function to redirect users of my old website to my the proper pages
 export const redirectFromOldBlog = () => {
   const url = window.location.pathname;
-  if (url === "/") {
+    const hash = window.location.hash;
+
+    if (url === "/" && (hash === "" || hash === "/")) {
     const newUrl = `/#/${localStorage.getItem("lang") || "en"}/`;
     window.history.pushState(null, "", newUrl);
   }
+
   const pathMatch = url.match(/^\/(\d{4})\/(\d{2})\/(\d{2})\/(.+)/);
   if (pathMatch && pathMatch[4] !== undefined) {
     const path = pathMatch[4].endsWith("/")
