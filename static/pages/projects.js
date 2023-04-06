@@ -138,7 +138,7 @@ export const projectsContent = {
                   data-canonical-src="https://shields.io/badge/-Discord-grey?logo=discord&amp;style=plastic"
                   style="max-width: 100%"
               /></a>
-              server that allow francophone people to participate in online <a
+              server that allows francophone people to participate in online <a
               href="https://en.wikipedia.org/wiki/Game_jam"
               >game jams</a
             >, made for the

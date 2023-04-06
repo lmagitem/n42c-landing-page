@@ -48,6 +48,9 @@ const doSendSignal = () => {
       resolution: `${screen.width}×${screen.height}`,
       browserSize: `${window.innerWidth}×${window.innerHeight}`,
       language: `${localStorage.getItem("lang")}`,
+      wurl: window.location.url,
+      whash: window.location.hash,
+      wpathname: window.location.pathname,
     });
   });
 };
