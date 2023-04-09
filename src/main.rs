@@ -26,10 +26,8 @@ async fn serve_robots_txt() -> Result<NamedFile> {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    std::env::set_var("RUST_LOG", "actix_web=info");
-
     let base_config = Dispatch::new()
-        .level(LevelFilter::Info)
+        .level(LevelFilter::Warn)
         .chain(std::io::stdout())
         .chain(
             log_file("actix-web.log").expect("Failed to create log file"),
