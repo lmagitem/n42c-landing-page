@@ -36,23 +36,48 @@ const loadTelemetryDeckApp = (onLoadedCallback) => {
 
 // Sends an analytics signal to Telemetry Deck.
 const doSendSignal = () => {
-  setTimeout(() => {
-    const uuid = getOrCreateUUIDCookie();
-    while (!window.td) {
-      // Wait until td has been initialized
+  setTimeout(async () => {
+    try {
+      const uuid = getOrCreateUUIDCookie
+        ? getOrCreateUUIDCookie()
+        : "anonymous";
+
+      // Check if window.td is initialized within 1500ms
+      const checkTdInitialization = () => {
+        return new Promise((resolve) => {
+          const interval = setInterval(() => {
+            if (window.td) {
+              clearInterval(interval);
+              resolve();
+            }
+          }, 100);
+
+          setTimeout(() => {
+            clearInterval(interval);
+            resolve();
+          }, 1500);
+        });
+      };
+
+      await checkTdInitialization();
+
+      if (window.td) {
+        window.td._app = window.td._app ?? appIdentifier;
+        window.td._user = window.td._user ?? uuid;
+
+        window.td.signal({
+          resolution: `${screen.width}×${screen.height}`,
+          browserSize: `${window.innerWidth}×${window.innerHeight}`,
+          language: localStorage.getItem("lang") ?? "unknown",
+          wurl: window.location.href,
+          whash: window.location.hash,
+          wpathname: window.location.pathname,
+        });
+      }
+    } catch (error) {
+      console.error("Error in doSendSignal:", error);
     }
-    window.td._app = window.td._app ?? appIdentifier;
-    window.td._user = window.td._user ?? uuid ?? "anonymous";
-    window.td.signal({
-      // isTestMode: true,
-      resolution: `${screen.width}×${screen.height}`,
-      browserSize: `${window.innerWidth}×${window.innerHeight}`,
-      language: `${localStorage.getItem("lang")}`,
-      wurl: window.location.url,
-      whash: window.location.hash,
-      wpathname: window.location.pathname,
-    });
-  });
+  }, 0);
 };
 
 // Initializes Telemetry Deck if needed and sends an analytics signal.

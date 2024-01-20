@@ -126,29 +126,6 @@ export const projectsContent = {
             </li>
           </ul>
         </li>
-        <li>
-          <p dir="auto">I manage:</p>
-          <ul dir="auto">
-            <li>
-              <a href="https://discord.gg/waYHBXbvx8">BaguetteJam</a>: a
-              <a href="https://discord.com/" rel="nofollow"
-                ><img
-                  src="https://camo.githubusercontent.com/04e1002d1e3b25de01040331ff0b68952467ce16013ebcbe15674df77a095a2a/68747470733a2f2f736869656c64732e696f2f62616467652f2d446973636f72642d677265793f6c6f676f3d646973636f7264267374796c653d706c6173746963"
-                  alt="Discord"
-                  data-canonical-src="https://shields.io/badge/-Discord-grey?logo=discord&amp;style=plastic"
-                  style="max-width: 100%"
-              /></a>
-              server that allows francophone people to participate in online <a
-              href="https://en.wikipedia.org/wiki/Game_jam"
-              >game jams</a
-            >, made for the
-              <a
-                href="https://globalgamejam.org/2023/jam-sites/france-%C3%A0-distance"
-                >Global Game Jam 2023</a
-              >
-            </li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>`,
@@ -281,28 +258,6 @@ export const projectsContent = {
               /></a>
               qui simule des jets de dés et génère des résultats pseudo-aléatoires
               de manière déterministe (<a href="https://crates.io/crates/seeded_dice_roller">Disponible ici</a>)
-            </li>
-          </ul>
-        </li>
-        <li>
-          <p dir="auto">Je gère :</p>
-          <ul dir="auto">
-            <li>
-              <a href="https://discord.gg/waYHBXbvx8">BaguetteJam</a> : un serveur
-              <a href="https://discord.com/" rel="nofollow"
-                ><img
-                  src="https://camo.githubusercontent.com/04e1002d1e3b25de01040331ff0b68952467ce16013ebcbe15674df77a095a2a/68747470733a2f2f736869656c64732e696f2f62616467652f2d446973636f72642d677265793f6c6f676f3d646973636f7264267374796c653d706c6173746963"
-                  alt="Discord"
-                  data-canonical-src="https://shields.io/badge/-Discord-grey?logo=discord&amp;style=plastic"
-                  style="max-width: 100%"
-              /></a>
-              francophone permettant de participer à des game jams
-              <a href="https://fr.wikipedia.org/wiki/Game_jam">game jams</a> en
-              ligne, créé pour la
-              <a
-                href="https://globalgamejam.org/2023/jam-sites/france-%C3%A0-distance"
-                >Global Game Jam 2023</a
-              >
             </li>
           </ul>
         </li>

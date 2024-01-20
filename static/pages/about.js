@@ -2,7 +2,7 @@ export const aboutContent = {
   contentEn: `<h1 id="page-title" class="align-center padded-bottom">Luc "Magitem" Toupense</h1>
   <div id="page-wrapper">
     <div dir="auto" class="line-height-1-5" align="center">
-      <p dir="auto" style="margin-bottom: 2em;">Mid+ frontend developer with 3+ years of commercial experience, including a year as a tech lead for a team of 6.<br/>
+      <p dir="auto" style="margin-bottom: 2em;">Mid+ frontend developer with 4+ years of commercial experience, including a year as a tech lead for a team of 6.<br/>
       Alongside a deep commitment to continuous learning and a strong focus on user needs, best practices and maintainability, I pride myself on my ability to help others grow around me and resolve conflicts before they become problems.</p>
       <p dir="auto" style="margin-bottom: 0.4em;">Find me on:</p>
       <p dir="auto" style="margin-top: 0.2em; margin-bottom: 0;">(Professional)</p>
@@ -65,7 +65,7 @@ export const aboutContent = {
   <div id="page-wrapper">
     <div dir="auto" class="line-height-1-5" align="center">
       <p dir="auto" style="margin-bottom: 2em">
-        Développeur front-end expérimenté avec plus de 3 ans d'expérience
+        Développeur front-end expérimenté avec plus de 4 ans d'expérience
         professionnelle, dont une année en tant que responsable technique pour une
         équipe de 6 personnes.<br />
         Je m'engage dans une démarche d'apprentissage continu et suis très
